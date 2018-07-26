@@ -84,7 +84,7 @@ def build_files(directory):
         build_file(directory + "/" + file, tail + "/")
 
 if len(sys.argv) <= 1:
-    print("Usage example: python build.py js/app_fs.js css/app_fs.css js/app_cm.js css/app_cm.css js/worker");
+    print("Usage example: python build.py js/app_fs.js css/app_fs.css js/app_cm.js css/app_cm.css js/worker")
 else:
     for arg in sys.argv[1:]:
         if os.path.isfile(arg): # single file
