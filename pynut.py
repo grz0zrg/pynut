@@ -17,8 +17,8 @@ import sys
 import glob
 import codecs
 
-# this will include files when it encounter /*#include filepath*/ pattern
-include_regex = re.compile("/\*#include (.*?)\*/")
+# this will include files when it encounter /*#include filepath*/ pattern, also work with HTML comments
+include_regex = re.compile("(\*|<!--)#include (.*?)(\*|-->)")
 # an entry point prefix,
 entry_point_prefix = "app_"
 # JavaScript prod. command to execute on JS output file (!target and !src are replaced with corresponding values)
@@ -41,7 +41,7 @@ def get_line_content(filepath, workdir):
         for line in f:
             inc = include_regex.search(line)
             if inc:
-                inc_filename = inc.group(1)
+                inc_filename = inc.group(2)
                 content += get_line_content(inc_filename, "")
 
                 print("L" + str(current_line) + ": including '" + inc_filename)
