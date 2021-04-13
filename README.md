@@ -4,9 +4,9 @@
 
 This is a generic **minimalist build system**, this was made to write web. app. without hassles.
 
-This is a simplified port of [nut](https://github.com/grz0zrg/nut), a more advanced build system made with the Anubis language.
+Simplified port of [nut](https://github.com/grz0zrg/nut), a more advanced build system made with the Anubis language.
 
-It is basically a simple pre-processor which is capable of concatenating files with an include directive pattern (not recursively) then execute programs to produce a production file like minification, optimizer etc.
+Basically a simple pre-processor which is capable of concatenating files with an include directive pattern (not recursive) then execute programs to produce a production file like minification, optimizer etc.
 
 This build system has no live check & "build on file change" features unlike Nut but you can add thoses easily under Linux or similar systems with inotify tool.
 
@@ -15,7 +15,7 @@ You only need to pass app files or directories as argument, pyNut will scan one 
 It is essential to start pyNut in the application root directory, a folder named `dist` should be there as well.
 
 Base example for web. applications with JS and CSS (basic setup):
- * `uglifyjs` and `csso` should be installed with Node/NPM `npm install uglifyjs csso`
+ * `uglifyjs` and `csso` should be installed with Node/NPM `npm install -g uglifyjs csso-cli`
  * The app. folder should contain a `js` and `css` folder
  * `js` folder should contain a file named `app_[APP_NAME].js` where `[APP_NAME]` is your application name
  * `css` folder should contain a file named `app_[APP_NAME].css` where `[APP_NAME]` is your application name

@@ -24,7 +24,7 @@ entry_point_prefix = "app_"
 # JavaScript prod. command to execute on JS output file (!target and !src are replaced with corresponding values)
 js_prod_cmd = "uglifyjs --compress --mangle --screw-ie8 -o !target -- !src"
 # CSS prod. command to execute on CSS output file (!target and !src are replaced with corresponding values)
-css_prod_cmd = "csso !src !target"
+css_prod_cmd = "csso -i !src -o !target"
 
 work_directory = os.getcwd()
 
